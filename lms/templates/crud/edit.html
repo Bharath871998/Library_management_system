@@ -1,0 +1,26 @@
+{% extends "crud/base.html" %}
+{% block title %}Edit Book {% endblock title %}
+{% block body %}
+
+
+<section class="container">
+    <div class="row justify-content-around text-center  mt-4">
+        <div class="col-sm-8">
+            <h2 class="text-center">Function Based LMS_CRUD Operation</h2>
+        </div>
+    </div>
+
+
+    <div class="row justify-content-around  mt-3">
+        <div class="col-sm-4">
+            <form action="" method="POST" class=" text-white bg-black p-3 rounded shadow">
+                {% csrf_token %}
+                {{form.as_p}}
+                <input id="id" name="edit" type="submit" value="Update" class="btn btn-success">
+                
+            </form>
+        </div>
+    </div>
+</section>
+
+{% endblock body %}
